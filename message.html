@@ -4,6 +4,25 @@
 <title>Birthday Surprise</title>
 
 <style>
+
+.confetti{
+position:fixed;
+top:-10px;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-10vh);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:1.0;
+}
+}
+
 body{
 margin:0;
 height:100vh;
@@ -17,10 +36,10 @@ text-align:center;
 }
 
 #emo{
-width:140px;
+width:180px;
 display:block;
 margin:40px auto;
-animation: float 3s ease-in-out infinite;
+animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float{
