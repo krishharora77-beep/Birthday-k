@@ -101,32 +101,47 @@ function showMessage(){
 document.getElementById("msg").innerHTML =
 "HAPPY B'DAY DEAR KHUSHI 🎉";
 
-for(let i=0;i<80;i++){
-
-let confetti=document.createElement("div");
-confetti.innerHTML="💝";
-confetti.style.position="fixed";
-confetti.style.left="100%";
-confetti.style.top="100%";
-confetti.style.fontSize="30px";
-
-let x=(Math.random()-0.5)*600;
-let y=(Math.random()-0.5)*600;
-
-confetti.animate([
-{ transform:"translate(0,0)", opacity:1 },
-{ transform:`translate(${x}px,${y}px)`, opacity:0 }
-],{
-duration:5000,
-easing:"ease-out"
-});
-
-document.body.appendChild(confetti);
-
-setTimeout(()=>confetti.remove(),1500);
+blastConfetti();
+startRain();
 
 }
-  }
+
+function blastConfetti(){
+
+for(let i=0;i<80;i++){
+
+let c=document.createElement("div");
+c.className="confetti";
+c.innerHTML="🎉";
+c.style.left=Math.random()*100+"vw";
+c.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),4000);
+}
+
+}
+
+function startRain(){
+
+setInterval(()=>{
+
+let c=document.createElement("div");
+c.className="confetti";
+c.innerHTML="🎉";
+c.style.left=Math.random()*100+"vw";
+c.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),6000);
+
+},200);
+
+}
+
+</script>
 
 </script>
 
