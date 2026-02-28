@@ -29,11 +29,6 @@ animation: float 3s ease-in-out infinite;
 100%{transform:translateY(0);}
 }
 
-.robot{
-font-size:80px;
-margin-bottom:20px;
-}
-
 button{
 padding:12px 25px;
 font-size:16px;
@@ -90,11 +85,11 @@ document.getElementById("msg").innerHTML =
 for(let i=0;i<80;i++){
 
 let confetti=document.createElement("div");
-confetti.innerHTML="🎉";
+confetti.innerHTML="💝";
 confetti.style.position="fixed";
-confetti.style.left="50%";
-confetti.style.top="40%";
-confetti.style.fontSize="22px";
+confetti.style.left="100%";
+confetti.style.top="100%";
+confetti.style.fontSize="30px";
 
 let x=(Math.random()-0.5)*600;
 let y=(Math.random()-0.5)*600;
@@ -103,7 +98,7 @@ confetti.animate([
 { transform:"translate(0,0)", opacity:1 },
 { transform:`translate(${x}px,${y}px)`, opacity:0 }
 ],{
-duration:1500,
+duration:5000,
 easing:"ease-out"
 });
 
