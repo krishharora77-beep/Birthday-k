@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Birthday Surprise</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
-    margin:40px;
-    height:50vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    background:linear-gradient(135deg,#ffe6f0,#e6f7ff);
-    font-family:Arial, sans-serif;
-    text-align:center;
+margin:0;
+padding:0;
+font-family:Arial;
+background:white;
+text-align:center;
+}
+
+.container{
+width:100%;
+padding-top:60px;
 }
 
 h1{
-    font-size:60px;
-    margin-bottom:10px;
-}
-
-p{
-    font-size:22px;
-    margin-bottom:30px;
+font-size:40px;
 }
 
 button{
-    font-size:20px;
-    padding:15px 30px;
-    border:none;
-    border-radius:30px;
-    margin:10px;
-    cursor:pointer;
+font-size:22px;
+padding:16px 30px;
+margin:15px;
+border:none;
+border-radius:10px;
+background:#4c6ef5;
+color:white;
+cursor:pointer;
 }
 
-.green{
-    background:#4CAF50;
-    color:white;
+button:hover{
+background:#364fc7;
 }
 
-.red{
-    background:#ff4d4d;
-    color:white;
+.marquee{
+position:absolute;
+bottom:0;
+width:100%;
+background:#fff3cd;
+font-size:20px;
+padding:10px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<h1>Hey 👋</h1>
-<p>I made something small...</p>
+<div class="container">
 
-<button onclick="location.href='message.html' " class="green">Click me if you're curious</button>
-<button onclick="location.href='error.html' " class="red">Don't click this</button>
+<h1>Hello Khushi 👀</h1>
 
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
+<p>Something interesting is waiting for you...</p>
 
-<div class="credits">
-<marquee>
-To thank the creator for all this... 
-<a href="creator.html">click here👋</a>
-</marquee>
+<button onclick="location.href='message.html'">
+Click me if you're curious
+</button>
+
+<br>
+
+<button onclick="location.href='error.html'">
+Don't Click
+</button>
+
 </div>
-    
+
+<div class="marquee">
+
+<marquee>
+
+To thank the creator for all this...
+<a href="creator.html">click here</a>
+
+</marquee>
+
+</div>
+
 </body>
 </html>
