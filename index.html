@@ -1,67 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hello There</title>
+<title>Birthday Surprise</title>
 
 <style>
+
 body{
-    background:white;
-    text-align:center;
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(135deg,#ffe6f0,#e6f7ff);
     font-family:Arial, sans-serif;
-    padding-top:100px;
+    text-align:center;
 }
 
 h1{
-    color:#ff4d6d;
-    font-size:40px;
+    font-size:60px;
+    margin-bottom:10px;
 }
 
 p{
-    font-size:20px;
-    color:#444;
+    font-size:22px;
+    margin-bottom:30px;
 }
 
 button{
+    font-size:20px;
     padding:15px 30px;
-    margin:15px;
-    font-size:18px;
     border:none;
     border-radius:30px;
+    margin:10px;
     cursor:pointer;
-    transition:0.3s;
 }
 
-#curious{
+.green{
     background:#4CAF50;
     color:white;
 }
 
-#curious:hover{
-    background:#45a049;
-}
-
-#dont{
+.red{
     background:#ff4d4d;
     color:white;
 }
 
-#dont:hover{
-    background:#e60000;
-}
 </style>
-
-<script>
-function curious(){
-    document.getElementById("message").innerHTML =
-    "So... you were curious 😏<br><br>I just wanted to say... you make my day a little brighter.";
-}
-
-function dont(){
-    document.getElementById("message").innerHTML =
-    "Hey! I told you not to click that 😂<br><br>Now that you're here... have a great day!";
-}
-</script>
-
 </head>
 
 <body>
@@ -69,10 +54,8 @@ function dont(){
 <h1>Hey 👋</h1>
 <p>I made something small...</p>
 
-<button id="curious" onclick="curious()">Click me if you're curious</button>
-<button id="dont" onclick="dont()">Don't click this</button>
-
-<p id="message" style="margin-top:40px;font-size:22px;"></p>
+<button class="green">Click me if you're curious</button>
+<button class="red">Don't click this</button>
 
 </body>
 </html>
