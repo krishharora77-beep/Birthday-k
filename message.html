@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Birthday Message</title>
+
+<title>Message</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
 margin:0;
+padding:0;
 font-family:Arial;
 text-align:center;
 background:#f4f8ff;
-overflow-x:hidden;
+overflow:hidden;
 }
 
 .container{
-margin-top:100px;
+width:100%;
+padding-top:80px;
 }
 
 #robot{
-width:170px;
+width:200px;
 animation:float 2s infinite ease-in-out;
 }
 
 @keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0px);}
+0%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+100%{transform:translateY(0)}
+}
+
+h2{
+font-size:32px;
 }
 
 button{
-padding:12px 26px;
-font-size:18px;
+font-size:22px;
+padding:16px 30px;
+margin-top:20px;
 border:none;
 border-radius:10px;
 background:#4c6ef5;
 color:white;
 cursor:pointer;
-margin-top:25px;
-}
-
-button:hover{
-background:#3b5bdb;
 }
 
 #message{
+font-size:40px;
 margin-top:30px;
-font-size:32px;
 color:#ff4d6d;
 font-weight:bold;
 }
@@ -54,16 +59,16 @@ font-weight:bold;
 position:fixed;
 top:-20px;
 font-size:22px;
-pointer-events:none;
 animation:fall linear forwards;
 }
 
 @keyframes fall{
-0%{transform:translateY(-20px);}
-100%{transform:translateY(110vh);}
+0%{transform:translateY(-20px)}
+100%{transform:translateY(110vh)}
 }
 
 </style>
+
 </head>
 
 <body>
@@ -80,7 +85,6 @@ animation:fall linear forwards;
 
 </div>
 
-
 <script>
 
 function showMessage(){
@@ -90,23 +94,23 @@ document.getElementById("message").innerHTML =
 
 blast();
 
-setInterval(confettiRain,120);
+setInterval(confetti,120);
 
 }
 
 function blast(){
 for(let i=0;i<120;i++){
-confettiRain();
+confetti();
 }
 }
 
-function confettiRain(){
+function confetti(){
 
 let c=document.createElement("div");
 
 c.className="confetti";
 
-let items=["🎉","🎊","✨","💙","💛","💜"];
+let items=["🎉","🎊","✨","💛","💙"];
 
 c.innerHTML=items[Math.floor(Math.random()*items.length)];
 
